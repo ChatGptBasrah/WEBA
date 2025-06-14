@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فاتورة مبيعات - قالب احترافي</title>
+    <link rel="stylesheet" href="invoice_styles.css">
+</head>
+<body>
+    <div class="invoice-container">
+        <!-- Header Section -->
+        <div class="invoice-header">
+            <div class="header-section header-right">
+                <div class="company-name">اسم الشركة التجارية</div>
+                <div class="contact-info">
+                    العنوان: شارع الرئيسي، المدينة<br>
+                    هاتف: 07801234567<br>
+                    إيميل: info@company.com
+                </div>
+            </div>
+            
+            <div class="header-section header-center">
+                <div class="company-logo">
+                    LOGO
+                </div>
+            </div>
+            
+            <div class="header-section header-left">
+                <div class="invoice-type">فاتورة</div>
+                <div class="invoice-type">مبيعات</div>
+            </div>
+        </div>
+        
+        <!-- Invoice Info -->
+        <div class="invoice-info">
+            <div class="info-item">
+                <strong>رقم:</strong> 21162
+            </div>
+            <div class="customer-section">
+                <div class="customer-label">اسم العميل</div>
+                <div class="customer-name">جاسم العراقي</div>
+            </div>
+            <div class="info-item">
+                <strong>التاريخ:</strong> 2025/06/02
+            </div>
+        </div>
+        
+        <!-- Items Table -->
+        <table class="items-table">
+            <thead>
+                <tr>
+                    <th class="item-number">ت</th>
+                    <th class="item-description">المادة</th>
+                    <th class="item-quantity">العدد</th>
+                    <th class="item-price">سعر المفرد</th>
+                    <th class="item-total">المجموع</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td class="item-description">شاشة كمبيوتر led 32 بوصة</td>
+                    <td>1</td>
+                    <td>100,000</td>
+                    <td>100,000</td>
+                </tr>
+                <!-- صفوف فارغة لإضافة المزيد من المنتجات -->
+                <tr class="empty-row">
+                    <td>2</td>
+                    <td class="item-description"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="empty-row">
+                    <td>3</td>
+                    <td class="item-description"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="empty-row">
+                    <td>4</td>
+                    <td class="item-description"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="empty-row">
+                    <td>5</td>
+                    <td class="item-description"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Total Section -->
+        <div class="total-section">
+            <div class="total-row">
+                <div class="total-label">المبلغ المطلوب</div>
+                <div class="total-amount">100,000</div>
+            </div>
+            <div class="total-row">
+                <div class="amount-words">مائة ألف دينار عراقي</div>
+                <div></div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="invoice-footer">
+            <div class="footer-section footer-left">
+                <strong>التوقيع</strong><br>
+                ________________
+            </div>
+            <div class="footer-section footer-center">
+                <strong>Store</strong><br>
+                12:32:07PM
+            </div>
+            <div class="footer-section footer-right">
+                شكراً لتعاملكم معنا<br>
+                نتطلع لخدمتكم مرة أخرى
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // JavaScript لطباعة الفاتورة
+        function printInvoice() {
+            window.print();
+        }
+        
+        // إضافة زر طباعة (يظهر فقط على الشاشة)
+        if (!window.matchMedia('print').matches) {
+            const printButton = document.createElement('button');
+            printButton.textContent = 'طباعة الفاتورة';
+            printButton.style.cssText = `
+                position: fixed;
+                top: 20px;
+                left: 20px;
+                padding: 10px 20px;
+                background: #d32f2f;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-family: 'Cairo', Arial, sans-serif;
+                font-weight: 600;
+                z-index: 1000;
+            `;
+            printButton.onclick = printInvoice;
+            document.body.appendChild(printButton);
+        }
+    </script>
+</body>
+</html>
+

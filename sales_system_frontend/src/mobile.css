@@ -1,0 +1,283 @@
+/* تحسينات إضافية للهواتف المحمولة */
+
+/* تحسين الخطوط للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .mobile-text-sm {
+    font-size: 0.875rem;
+  }
+  
+  .mobile-text-base {
+    font-size: 1rem;
+  }
+  
+  .mobile-text-lg {
+    font-size: 1.125rem;
+  }
+  
+  .mobile-text-xl {
+    font-size: 1.25rem;
+  }
+}
+
+/* تحسين الأزرار للمس */
+@media (max-width: 768px) {
+  .mobile-touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .mobile-button {
+    padding: 12px 16px;
+    font-size: 16px;
+  }
+}
+
+/* تحسين المساحات للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .mobile-padding {
+    padding: 1rem;
+  }
+  
+  .mobile-margin {
+    margin: 0.5rem;
+  }
+  
+  .mobile-gap {
+    gap: 0.75rem;
+  }
+}
+
+/* تحسين الجداول للهواتف */
+@media (max-width: 768px) {
+  .mobile-table {
+    font-size: 0.875rem;
+  }
+  
+  .mobile-table th,
+  .mobile-table td {
+    padding: 8px 4px;
+  }
+  
+  .mobile-table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* تحسين النوافذ المنبثقة للهواتف */
+@media (max-width: 768px) {
+  .mobile-dialog {
+    margin: 1rem;
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+  }
+  
+  .mobile-dialog-content {
+    padding: 1rem;
+  }
+}
+
+/* تحسين الشريط الجانبي للهواتف */
+@media (max-width: 768px) {
+  .mobile-sidebar {
+    width: 100%;
+    max-width: 320px;
+  }
+  
+  .mobile-sidebar-item {
+    padding: 12px 16px;
+    font-size: 16px;
+  }
+}
+
+/* تحسين البطاقات للهواتف */
+@media (max-width: 768px) {
+  .mobile-card {
+    margin: 0.5rem;
+    border-radius: 8px;
+  }
+  
+  .mobile-card-content {
+    padding: 1rem;
+  }
+}
+
+/* تحسين النماذج للهواتف */
+@media (max-width: 768px) {
+  .mobile-form-input {
+    font-size: 16px; /* منع التكبير التلقائي في iOS */
+    padding: 12px;
+  }
+  
+  .mobile-form-label {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+/* تحسين التنقل للهواتف */
+@media (max-width: 768px) {
+  .mobile-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-top: 1px solid #e5e7eb;
+    padding: 8px;
+    z-index: 50;
+  }
+  
+  .mobile-nav-item {
+    flex: 1;
+    text-align: center;
+    padding: 8px 4px;
+    font-size: 12px;
+  }
+}
+
+/* تحسين الرسوم البيانية للهواتف */
+@media (max-width: 768px) {
+  .mobile-chart {
+    height: 250px;
+    margin: 1rem 0;
+  }
+  
+  .mobile-chart-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* تحسين الطباعة للهواتف */
+@media print {
+  .print-hidden {
+    display: none !important;
+  }
+  
+  .print-full-width {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+}
+
+/* تحسين التمرير للهواتف */
+@media (max-width: 768px) {
+  .mobile-scroll {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+  
+  .mobile-scroll-x {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .mobile-scroll-y {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* تحسين التفاعل باللمس */
+@media (max-width: 768px) {
+  .mobile-touch {
+    touch-action: manipulation;
+  }
+  
+  .mobile-no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}
+
+/* تحسين الخطوط العربية للهواتف */
+@media (max-width: 768px) {
+  .mobile-arabic {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    direction: rtl;
+    text-align: right;
+  }
+  
+  .mobile-arabic-number {
+    direction: ltr;
+    display: inline-block;
+  }
+}
+
+/* تحسين الألوان للوضع المظلم */
+@media (prefers-color-scheme: dark) {
+  .dark-mode-bg {
+    background-color: #1f2937;
+    color: #f9fafb;
+  }
+  
+  .dark-mode-card {
+    background-color: #374151;
+    border-color: #4b5563;
+  }
+}
+
+/* تحسين الحركة والانتقالات */
+@media (max-width: 768px) {
+  .mobile-transition {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .mobile-fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* تحسين الشبكة للهواتف */
+@media (max-width: 768px) {
+  .mobile-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .mobile-grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* تحسين الصور للهواتف */
+@media (max-width: 768px) {
+  .mobile-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .mobile-avatar {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* تحسين التحميل للهواتف */
+@media (max-width: 768px) {
+  .mobile-loading {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .mobile-spinner {
+    width: 32px;
+    height: 32px;
+  }
+}
+
